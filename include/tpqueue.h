@@ -20,7 +20,7 @@ class TPQueue {
   TPQueue() : head(nullptr), tail(nullptr) { }
   ~TPQueue();
   void push(const T&);
-  const T& pop();
+  T pop();
   void print() const;
 };
 
@@ -79,7 +79,7 @@ void TPQueue<T>::push(const T& d) {
 }
 
 template <typename T>
-const T& TPQueue<T>::pop() {
+T TPQueue<T>::pop() {
   if (!head) {
     throw std::string("Empty!");
   } else {
