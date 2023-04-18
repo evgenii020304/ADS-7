@@ -62,7 +62,7 @@ void TPQueue<T>::push(const T& d) {
     while (tmp != head && tmp->data.prior < d.prior) {
       tmp = tmp->pred;
     }
-    if (tmp->data.prior == d.prior) {
+    if (tmp->data.prior > d.prior) {
       Item* cell = new Item;
       cell->next = tmp->next;
       cell->pred = tmp;
